@@ -77,9 +77,9 @@ const ProductPage = () => {
         <div className="product-details">
           <h1>{product.name}</h1>
           <img src={product.imgSrc} alt={product.name} />
-          <div className="button-container">
+          <div className="button-container" onClick={handleAddToCart}>
             <Link to={`/cart`} className="cart-link">
-              <button className="cart-button">В корзину</button>
+              <button className="description-btn">В корзину</button>
             </Link>
           </div>
           <button onClick={handleShowDescription} className="description-btn">
