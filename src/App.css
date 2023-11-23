@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+body, html {
+    background-color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+img {
+    min-height: 320px;
+    min-width: 320px;
+    max-height: 320px;
+    max-width: 320px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid-item {
+    width: 30%; /* Adjust as needed */
+    margin: 10px;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.grid-item button:hover {
+  background-color: #0056b3;
+}
+
+.product-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.product-details {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-details img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  margin-bottom: 15px;
+}
+
+.product-details button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 10px; /* Adjust the margin */
+}
+
+.product-details button:hover {
+  background-color: #0056b3;
+}
+
+.product-details .cart {
+  width: 30px;
+  height: 30px;
+}
+
+.product-details .description {
+  display: none;
+}
+
+.product-details .show-description {
+  background-color: #28a745;
+}
+
+.product-details .show-description:hover {
+  background-color: #218838;
 }
