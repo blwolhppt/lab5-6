@@ -1,23 +1,18 @@
 import './App.css';
-import {HashRouter as Router, Route, Link, Routes} from "react-router-dom";
-import MainPage from "./MainPage";
-import ProductPage from "./productPage";
-import CartPage from "./Cart"
-import {CartProvider} from "./CartContext";
+import {HashRouter as Router, Route, Routes} from "react-router-dom";
+import Main from "./Main";
+import About from "./About";
 
 
 function App() {
     return (
         <>
-            <CartProvider>
                 <Router>
                     <Routes>
-                        <Route path="/" element={<MainPage />} />
-                        <Route path="/product/:productId" element={<ProductPage />} />
-                        <Route path="/cart" element={<CartPage />} />
+                        <Route path="/" element={<Main />} />
+                        <Route path="/student/:studentId" element={<About />} />
                     </Routes>
                 </Router>
-            </CartProvider>
         </>
     );
 }
